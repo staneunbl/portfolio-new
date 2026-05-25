@@ -2,41 +2,61 @@ import type { Project } from "../types/projects.types";
 
 export const projects: Project[] = [
   {
-    title: "Pulse Analytics",
+    title: "Real-Time Operations Dashboard System",
     description:
-      "Responsive analytics workspace designed for operations teams. Delivered charts, filters and exports in a polished Next.js interface.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Chart.js"],
+      "Developed a real-time dashboard system with dynamic data fetching, query-based filtering, and optimized API handling for operational monitoring.",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "React Query",
+      "JWT Authentication",
+    ],
     github: "#",
     demo: "#",
-    type: "Dashboard",
-    date: "2024",
+    type: "Dashboard System",
+    date: "2025",
   },
   {
-    title: "AuthFlow",
+    title: "Payroll & Management System",
     description:
-      "Modular authentication UI with token handling, sign-in flows and secure session state for modern web apps.",
-    tech: ["React", "Node.js", "JWT", "Prisma"],
+      "Built payroll and crew management functionalities with secure token authentication, reusable interfaces, and PDF generation features.",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "PDF Generation",
+      "Token Authentication",
+    ],
     github: "#",
-    type: "Authentication",
-    date: "2024",
+    type: "Management System",
+    date: "2025",
   },
   {
-    title: "Design System",
+    title: "Realty CRM & Marketing Management System",
     description:
-      "Reusable component library with accessible controls, theme variants, and responsive layout utilities.",
-    tech: ["React", "Storybook", "Tailwind CSS", "TypeScript"],
+      "Developed a CRM and marketing platform with role-based access control, scalable dashboard interfaces, and authentication workflows.",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Role-Based Access Control",
+      "JWT Authentication",
+    ],
     github: "#",
     demo: "#",
-    type: "Component Library",
-    date: "2023",
+    type: "CRM System",
+    date: "2025",
   },
   {
-    title: "Launch Page",
+    title: "Inventory & Management System",
     description:
-      "High-conversion landing experience with fast loading performance, animated sections, and polished product storytelling.",
-    tech: ["Next.js", "Framer Motion", "Vercel"],
+      "Created an inventory management platform with monitoring dashboards, reusable frontend components, authentication, and PDF export features.",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "JWT Authentication",
+      "PDF Generation",
+    ],
     demo: "#",
-    type: "Marketing",
-    date: "2023",
+    type: "Inventory System",
+    date: "2025",
   },
 ];

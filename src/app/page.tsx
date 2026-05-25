@@ -152,7 +152,7 @@ export default function Home() {
                   I’m available for frontend roles, product work, and design system projects. Reach out for remote or hybrid opportunities.
                 </p>
                 <a
-                  href="mailto:hello@shayyanne.dev"
+                  href="mailto:shayyannelee@gmail.com"
                   className="mt-8 inline-flex items-center rounded-full bg-sky-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-sky-500"
                 >
                   Email me
@@ -164,15 +164,15 @@ export default function Home() {
                 <div className="mt-6 space-y-4 text-sm text-slate-600 dark:text-slate-300">
                   <div>
                     <p className="font-semibold text-slate-900 dark:text-white">Email</p>
-                    <p className="mt-2">hello@shayyanne.dev</p>
+                    <p className="mt-2">shayyannelee@gmail.com</p>
                   </div>
                   <div>
                     <p className="font-semibold text-slate-900 dark:text-white">GitHub</p>
-                    <p className="mt-2 text-sky-600">github.com/your-handle</p>
+                    <p className="mt-2 text-sky-600">https://github.com/staneunbl</p>
                   </div>
                   <div>
                     <p className="font-semibold text-slate-900 dark:text-white">LinkedIn</p>
-                    <p className="mt-2 text-sky-600">linkedin.com/in/your-handle</p>
+                    <p className="mt-2 text-sky-600">https://www.linkedin.com/in/shayyanne-dominiq-marasigan-963467259/</p>
                   </div>
                 </div>
               </aside>
