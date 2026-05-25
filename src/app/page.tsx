@@ -1,7 +1,9 @@
+import ExperiencesCard from "../components/ExperincesCard";
 import ProjectCard from "../components/ProjectCard";
 import RightPanel from "../components/RightPanel";
 import Section from "../components/Section";
 import Sidebar from "../components/Sidebar";
+import { experiences } from "../data/experiences";
 import { projects } from "../data/projects";
 
 export default function Home() {
@@ -135,32 +137,10 @@ export default function Home() {
           </Section>
 
           <Section id="experience" title="Experience">
-            <div className="grid gap-6 md:grid-cols-2">
-              <div className="rounded-[32px] border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                <p className="text-xs uppercase tracking-[0.3em] text-sky-500">Associate Software Engineer</p>
-                <h3 className="mt-4 text-xl font-semibold text-slate-950 dark:text-white">Product interface development</h3>
-                <p className="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-300">
-                  Built and maintained a SaaS dashboard experience with reusable components, responsive charts, and a streamlined onboarding flow.
-                </p>
-                <div className="mt-5 flex flex-wrap gap-2 text-xs text-slate-500 dark:text-slate-400">
-                  <span className="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Next.js</span>
-                  <span className="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Tailwind CSS</span>
-                  <span className="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Performance</span>
-                </div>
-              </div>
-
-              <div className="rounded-[32px] border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                <p className="text-xs uppercase tracking-[0.3em] text-sky-500">Freelance product work</p>
-                <h3 className="mt-4 text-xl font-semibold text-slate-950 dark:text-white">Landing pages & marketing flows</h3>
-                <p className="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-300">
-                  Delivered polished marketing landing pages that supported launches, improved engagement, and kept web performance high.
-                </p>
-                <div className="mt-5 flex flex-wrap gap-2 text-xs text-slate-500 dark:text-slate-400">
-                  <span className="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Figma</span>
-                  <span className="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">Accessibility</span>
-                  <span className="rounded-full border border-slate-200 px-3 py-1 dark:border-slate-800">UX refinement</span>
-                </div>
-              </div>
+             <div className="space-y-6">
+              {experiences.map((experience) => (
+                <ExperiencesCard key={experience.title} experience={experience} />
+              ))}
             </div>
           </Section>
 
