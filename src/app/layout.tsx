@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Shayyanne Marasigan — Associate Software Engineer",
+  title: "Shayyanne Marasigan — Software Engineer",
   description:
-    "Portfolio of Shayyanne Marasigan, Associate Software Engineer specializing in Next.js, TypeScript, and premium frontend experiences.",
+    "Portfolio of Shayyanne Marasigan, Software Engineer specializing in Next.js, TypeScript, and premium frontend experiences.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

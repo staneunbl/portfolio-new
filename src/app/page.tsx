@@ -5,6 +5,7 @@ import Section from "../components/Section";
 import Sidebar from "../components/Sidebar";
 import { experiences } from "../data/experiences";
 import { projects } from "../data/projects";
+import { certifications, technicalSkills, toolSkills, workApproach } from "../data/skills";
 
 export default function Home() {
   return (
@@ -16,12 +17,13 @@ export default function Home() {
           <Section id="home" title="">
             <div className="grid gap-10 lg:grid-cols-[1.35fr_0.9fr] lg:items-center">
               <div className="max-w-2xl">
-                <p className="text-sm uppercase tracking-[0.32em] text-sky-500">Associate Software Engineer</p>
+                <p className="text-sm uppercase tracking-[0.32em] text-sky-500">Software Engineer</p>
                 <h1 className="mt-6 text-5xl font-semibold tracking-tight text-slate-950 dark:text-white sm:text-6xl">
-                  Crafting polished frontend systems for product-led teams
+                  Software Engineer
                 </h1>
+
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">
-                  I build thoughtful, scalable web experiences with Next.js, TypeScript and refined UI systems that feel fast, accessible, and confident.
+                  Frontend-focused developer building modern web applications with Next.js and TypeScript.
                 </p>
                 <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                   <a
@@ -39,21 +41,38 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                <p className="text-xs uppercase tracking-[0.35em] text-slate-500">Featured outcomes</p>
-                <div className="mt-8 grid gap-4">
-                  <div className="rounded-[24px] bg-slate-50 p-5 dark:bg-slate-950/80">
-                    <p className="text-sm font-medium text-slate-900 dark:text-white">Faster launch cycles</p>
-                    <p className="mt-3 text-3xl font-semibold text-sky-600">3 weeks</p>
-                    <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">MVP frontend shipped with reusable components and polished UI.</p>
+              <div className="rounded-[32px] border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+                <div className="relative overflow-hidden rounded-[24px]">
+                  <img
+                    src="/profile.jpg"
+                    alt="Shayyanne Marasigan"
+                    className="h-[420px] w-full object-cover object-[55%_80%]"
+                  />
+                  {/* subtle gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent" />
+
+                  {/* floating badge */}
+                  <div className="absolute top-4 left-4 rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-slate-900 shadow-sm backdrop-blur dark:bg-slate-900/80 dark:text-white">
+                    Available for work
                   </div>
-                  <div className="rounded-[24px] bg-slate-50 p-5 dark:bg-slate-950/80">
-                    <p className="text-sm font-medium text-slate-900 dark:text-white">Accessible interfaces</p>
-                    <p className="mt-3 text-3xl font-semibold text-sky-600">WCAG AA</p>
-                    <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">Built with focus states, keyboard journeys and semantic structure.</p>
+
+                  {/* bottom text overlay */}
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <p className="text-sm font-semibold text-white">
+                      Software Engineer
+                    </p>
+                    <p className="mt-1 text-xs text-slate-200">
+                      Next.js • TypeScript • React • API-driven systems
+                    </p>
                   </div>
                 </div>
-              </div> */}
+
+                <div className="mt-5">
+                  <p className="text-sm text-slate-600 dark:text-slate-300">
+                    Building scalable web applications, dashboard systems, and role-based platforms with modern frontend architecture.
+                  </p>
+                </div>
+              </div>
             </div>
           </Section>
 
@@ -61,27 +80,35 @@ export default function Home() {
             <div className="grid gap-8 lg:grid-cols-[1.4fr_0.85fr]">
               <div className="space-y-6 text-slate-600 dark:text-slate-300">
                 <p>
-                  I partner with product teams to design and build elegant frontend experiences that feel fast and intuitive. My work blends pragmatic engineering with strong visual systems, so interfaces are memorable without being noisy.
+                  I build and maintain frontend applications using Next.js, TypeScript, and modern React tools. Most of my work focuses on dashboard systems, internal tools, and API-driven web applications.
                 </p>
+
                 <p>
-                  I enjoy turning complex product requirements into clean interactions, shipping accessible components, and optimizing pages for performance and maintainability.
+                  I enjoy turning business requirements into functional interfaces, building reusable components, and working with backend APIs through BFF architecture, authentication, and role-based access systems.
                 </p>
               </div>
 
               <div className="space-y-4 rounded-[32px] border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
                 <div className="rounded-[24px] bg-slate-50 p-5 dark:bg-slate-900">
-                  <p className="text-sm font-semibold text-slate-900 dark:text-white">What I bring</p>
+                  <p className="text-sm font-semibold text-slate-900 dark:text-white">
+                    What I Do
+                  </p>
                   <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
-                    Frontend craftsmanship, thoughtful component systems, and polished product-ready interfaces.
+                    I develop modern web applications with a focus on clean code,
+                    responsive design, and user-friendly experiences.
                   </p>
                 </div>
+
                 <div className="grid gap-3">
                   {[
-                    "Component-driven UI systems",
-                    "Next.js + TypeScript performance",
-                    "Responsive, accessible experiences",
+                    "Frontend Development",
+                    "Next.js & TypeScript",
+                    "Responsive Web Design",
                   ].map((item) => (
-                    <div key={item} className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200">
+                    <div
+                      key={item}
+                      className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200"
+                    >
                       {item}
                     </div>
                   ))}
@@ -101,15 +128,11 @@ export default function Home() {
           <Section id="skills" title="Skills">
             <div className="grid gap-5 sm:grid-cols-2">
               <div className="rounded-[32px] border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                <h3 className="text-base font-semibold text-slate-900 dark:text-white">Primary toolkit</h3>
+                <h3 className="text-base font-semibold text-slate-900 dark:text-white">
+                  Technical Skills
+                </h3>
                 <div className="mt-5 flex flex-wrap gap-2">
-                  {[
-                    "Next.js",
-                    "React",
-                    "TypeScript",
-                    "Tailwind CSS",
-                    "Framer Motion",
-                  ].map((skill) => (
+                  {technicalSkills.map((skill) => (
                     <span key={skill} className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-200">
                       {skill}
                     </span>
@@ -118,15 +141,11 @@ export default function Home() {
               </div>
 
               <div className="rounded-[32px] border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                <h3 className="text-base font-semibold text-slate-900 dark:text-white">Tooling & process</h3>
+                <h3 className="text-base font-semibold text-slate-900 dark:text-white">
+                  Tools, Design & Media
+                </h3>
                 <div className="mt-5 flex flex-wrap gap-2">
-                  {[
-                    "Vercel",
-                    "Git",
-                    "Figma",
-                    "ESLint",
-                    "Playwright",
-                  ].map((skill) => (
+                  {toolSkills.map((skill) => (
                     <span key={skill} className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-200">
                       {skill}
                     </span>
@@ -134,10 +153,37 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            <div className="mt-5 rounded-[32px] border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+              <h3 className="text-base font-semibold text-slate-900 dark:text-white">
+                Qualities & Work Approach
+              </h3>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                {workApproach.map((item) => (
+                  <span key={item} className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-200">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-5 rounded-[32px] border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+              <h3 className="text-base font-semibold text-slate-900 dark:text-white">
+                Certifications
+              </h3>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {certifications.map((cert) => (
+                  <span key={cert} className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-200">
+                    {cert}
+                  </span>
+                ))}
+              </div>
+            </div>
           </Section>
 
           <Section id="experience" title="Experience">
-             <div className="space-y-6">
+            <div className="space-y-6">
               {experiences.map((experience) => (
                 <ExperiencesCard key={experience.title} experience={experience} />
               ))}

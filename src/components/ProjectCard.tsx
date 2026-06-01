@@ -33,22 +33,22 @@ export default function ProjectCard({ project }: { project: Project }) {
       </div>
 
       <div className="mt-6 flex flex-wrap gap-3 text-sm">
-        {project.github && (
+        {/* {project.github && (
           <a
             href={project.github}
             className="inline-flex items-center rounded-full border border-slate-200 px-4 py-2 text-slate-700 transition hover:border-slate-300 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-200 dark:hover:bg-slate-900"
           >
             GitHub
           </a>
-        )}
-        {project.demo && (
+        )} */}
+        {/* {project.demo && (
           <a
             href={project.demo}
             className="inline-flex items-center rounded-full bg-slate-950 px-4 py-2 text-white transition hover:bg-slate-800"
           >
             Live demo
           </a>
-        )}
+        )} */}
       </div>
     </article>
   );

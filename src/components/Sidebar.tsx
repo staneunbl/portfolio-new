@@ -18,10 +18,9 @@ export default function Sidebar() {
     <>
       <aside className="hidden md:flex sticky top-0 h-screen w-72 flex-col gap-10 border-r border-slate-200 bg-white/90 px-6 py-8 text-slate-900 shadow-sm dark:border-slate-800 dark:bg-slate-950/95 dark:text-slate-100">
         <div className="space-y-6">
-          <div className="inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-slate-950 text-white shadow-lg">
+          <div className="inline-flex h-12 w-12 items-center justify-center rounded-3xl border border-slate-700 bg-slate-900 text-white shadow-md">
             SM
           </div>
-
           <div>
             <p className="text-xs uppercase tracking-[0.32em] text-sky-500">Associate Software Engineer</p>
             <h1 className="mt-4 text-2xl font-semibold">Shayyanne Marasigan</h1>
