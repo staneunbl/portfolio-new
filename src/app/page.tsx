@@ -1,3 +1,4 @@
+import { Briefcase, ExternalLink, Layers, Mail, Sparkles } from "lucide-react";
 import ExperiencesCard from "../components/ExperincesCard";
 import ProjectCard from "../components/ProjectCard";
 import RightPanel from "../components/RightPanel";
@@ -15,7 +16,7 @@ export default function Home() {
       <main className="flex-1 px-4 py-8 sm:px-6 lg:px-10 xl:px-12">
         <div className="mx-auto w-full max-w-6xl">
           <Section id="home" title="">
-            <div className="grid gap-10 lg:grid-cols-[1.35fr_0.9fr] lg:items-center">
+            <div className="gap-10 lg:grid lg:grid-cols-[1.45fr_0.85fr] lg:items-start">
               <div className="max-w-2xl">
                 <p className="text-sm uppercase tracking-[0.32em] text-sky-500">Software Engineer</p>
                 <h1 className="mt-6 text-5xl font-semibold tracking-tight text-slate-950 dark:text-white sm:text-6xl">
@@ -25,12 +26,13 @@ export default function Home() {
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">
                   Frontend-focused developer building modern web applications with Next.js and TypeScript.
                 </p>
+
                 <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                   <a
                     href="#projects"
                     className="inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-950/10 transition hover:bg-slate-800"
                   >
-                    View selected work
+                    View work
                   </a>
                   <a
                     href="#contact"
@@ -46,7 +48,7 @@ export default function Home() {
                   <img
                     src="/profile.jpg"
                     alt="Shayyanne Marasigan"
-                    className="h-[420px] w-full object-cover object-[55%_80%]"
+                    className="h-[360px] w-full object-cover object-[55%_80%]"
                   />
                   {/* subtle gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent" />
@@ -88,28 +90,47 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="space-y-4 rounded-[32px] border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                <div className="rounded-[24px] bg-slate-50 p-5 dark:bg-slate-900">
-                  <p className="text-sm font-semibold text-slate-900 dark:text-white">
-                    What I Do
+              <div className="rounded-[32px] border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.35em] text-slate-500">
+                    Focus
                   </p>
-                  <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
-                    I develop modern web applications with a focus on clean code,
-                    responsive design, and user-friendly experiences.
-                  </p>
+                  <h2 className="mt-3 text-xl font-semibold text-slate-950 dark:text-white">
+                    Product-focused frontend
+                  </h2>
                 </div>
 
-                <div className="grid gap-3">
+                <div className="mt-6 space-y-3">
                   {[
-                    "Frontend Development",
-                    "Next.js & TypeScript",
-                    "Responsive Web Design",
+                    {
+                      label: "UI & UX",
+                      description: "Clean, responsive interfaces",
+                      icon: Briefcase,
+                    },
+                    {
+                      label: "Performance",
+                      description: "Optimized React applications",
+                      icon: Layers,
+                    },
+                    {
+                      label: "Teamwork",
+                      description: "Reusable and maintainable code",
+                      icon: Sparkles,
+                    },
                   ].map((item) => (
                     <div
-                      key={item}
-                      className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200"
+                      key={item.label}
+                      className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-900"
                     >
-                      {item}
+                      <item.icon className="mt-0.5 h-4 w-4 text-slate-700 dark:text-slate-300" />
+                      <div>
+                        <p className="text-sm font-semibold text-slate-950 dark:text-white">
+                          {item.label}
+                        </p>
+                        <p className="text-xs text-slate-600 dark:text-slate-300">
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -126,11 +147,9 @@ export default function Home() {
           </Section>
 
           <Section id="skills" title="Skills">
-            <div className="grid gap-5 sm:grid-cols-2">
+            <div className="grid gap-5 lg:grid-cols-2">
               <div className="rounded-[32px] border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                <h3 className="text-base font-semibold text-slate-900 dark:text-white">
-                  Technical Skills
-                </h3>
+                <h3 className="text-base font-semibold text-slate-900 dark:text-white">Core stack</h3>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {technicalSkills.map((skill) => (
                     <span key={skill} className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-200">
@@ -141,9 +160,7 @@ export default function Home() {
               </div>
 
               <div className="rounded-[32px] border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-                <h3 className="text-base font-semibold text-slate-900 dark:text-white">
-                  Tools, Design & Media
-                </h3>
+                <h3 className="text-base font-semibold text-slate-900 dark:text-white">Workflow & tools</h3>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {toolSkills.map((skill) => (
                     <span key={skill} className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-200">
@@ -155,23 +172,7 @@ export default function Home() {
             </div>
 
             <div className="mt-5 rounded-[32px] border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-              <h3 className="text-base font-semibold text-slate-900 dark:text-white">
-                Qualities & Work Approach
-              </h3>
-
-              <div className="mt-5 flex flex-wrap gap-2">
-                {workApproach.map((item) => (
-                  <span key={item} className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-200">
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-5 rounded-[32px] border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-              <h3 className="text-base font-semibold text-slate-900 dark:text-white">
-                Certifications
-              </h3>
+              <h3 className="text-base font-semibold text-slate-900 dark:text-white">Certifications</h3>
               <div className="mt-5 flex flex-wrap gap-2">
                 {certifications.map((cert) => (
                   <span key={cert} className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-200">
@@ -208,18 +209,18 @@ export default function Home() {
               <aside className="rounded-[32px] border border-slate-200 bg-slate-50 p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
                 <p className="text-xs uppercase tracking-[0.32em] text-slate-500">Connect</p>
                 <div className="mt-6 space-y-4 text-sm text-slate-600 dark:text-slate-300">
-                  <div>
-                    <p className="font-semibold text-slate-900 dark:text-white">Email</p>
-                    <p className="mt-2">shayyannelee@gmail.com</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-slate-900 dark:text-white">GitHub</p>
-                    <p className="mt-2 text-sky-600">https://github.com/staneunbl</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-slate-900 dark:text-white">LinkedIn</p>
-                    <p className="mt-2 text-sky-600">https://www.linkedin.com/in/shayyanne-dominiq-marasigan-963467259/</p>
-                  </div>
+                  <a href="mailto:shayyannelee@gmail.com" className="inline-flex items-center gap-2 text-slate-700 transition hover:text-slate-900 dark:text-slate-200 dark:hover:text-white">
+                    <Mail className="h-4 w-4" />
+                    shayyannelee@gmail.com
+                  </a>
+                  <a href="https://github.com/staneunbl" className="inline-flex items-center gap-2 text-slate-700 transition hover:text-slate-900 dark:text-slate-200 dark:hover:text-white">
+                    <ExternalLink className="h-4 w-4" />
+                    github.com/staneunbl
+                  </a>
+                  <a href="https://www.linkedin.com/in/shayyanne-dominiq-marasigan-963467259/" className="inline-flex items-center gap-2 text-slate-700 transition hover:text-slate-900 dark:text-slate-200 dark:hover:text-white">
+                    <ExternalLink className="h-4 w-4" />
+                    linkedin.com/in/shayyanne-dominiq-marasigan-963467259
+                  </a>
                 </div>
               </aside>
             </div>
