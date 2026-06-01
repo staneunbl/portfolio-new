@@ -22,7 +22,7 @@ export default function Sidebar() {
             SM
           </div>
           <div>
-            <p className="text-xs uppercase tracking-[0.32em] text-sky-500">Associate Software Engineer</p>
+            <p className="text-xs uppercase tracking-[0.32em] text-sky-500">Software Engineer</p>
             <h1 className="mt-4 text-2xl font-semibold">Shayyanne Marasigan</h1>
             <p className="mt-3 text-sm text-slate-600 dark:text-slate-400">
               I build modern frontend systems with clean design and strong engineering.
